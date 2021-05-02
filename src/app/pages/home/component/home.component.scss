@@ -1,0 +1,37 @@
+@import "src/theme/theme-variables";
+
+.search-content {
+	margin-bottom: 120px;
+	p {
+		margin-bottom: 0.5rem;
+		font-size: 36px;
+		font-weight: 600;
+		span {
+			color: $main-color;
+		}
+	}
+}
+
+header {
+	padding: 1rem;
+}
+
+footer {
+	background-color: $gray-200;
+	padding: .5rem 1rem;
+	.line {
+		border-bottom: 1px solid $gray-400;
+	}
+	.line2 {
+		padding-top: 0.75rem;
+		a {
+			padding: 0 0.25rem;
+			img {
+				width: 24px;
+			}
+		}
+	}
+	.copy-right {
+		color: $gray-600;
+	}
+}

@@ -1,0 +1,31 @@
+<div class="search-panel animate__animated animate__fadeIn">
+	<div class="container" #imageContent>
+		<nav class="nav-search navbar navbar-expand p-0">
+			<div class="mr-auto results">
+				<span *ngIf="totalItems">About {{ totalItems }} results</span>
+			</div>
+		</nav>
+		<virtual-scroller
+			class="row"
+			#imageScroller
+			[items]="images"
+			[parentScroll]="imageScroller.window"
+			(vsEnd)="onVsEnd($event)"
+		>
+			<div
+				class="col-sm-6 col-md-4 col-lg-3 animate__animated animate__fadeIn"
+				*ngFor="let item of imageScroller.viewPortItems; let index = index"
+			>
+				<div class="search-item shadow border mt-4" (click)="openDetail()">
+					<app-image
+						[image]="item.webformatURL"
+						[height]="300"
+						[alt]="item.tags"
+					></app-image>
+				</div>
+			</div>
+		</virtual-scroller>
+		<p class="pt-4" *ngIf="!isLoading && images && images.length === 0">Sorry, No data avaiable</p>
+	</div>
+	<app-loader class="w-100" [isLoading]="isLoading"></app-loader>
+</div>

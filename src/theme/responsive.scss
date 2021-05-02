@@ -1,0 +1,89 @@
+@include media-breakpoint-down(md) {
+	.navbar-dark {
+		.navbar-toggler {
+			color: $white;
+			border-color: $white;
+			font-size: 1.5rem;
+		}
+	}
+	.main-menu {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		padding-top: 30px;
+		background: $pink;
+		text-align: center;
+		.close-menu {
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 2rem;
+			color: $white;
+			border: none;
+		}
+		.navbar-brand {
+			margin: 0;
+		}
+		.search {
+			margin-bottom: 0.75rem;
+			img {
+				width: 24px !important;
+			}
+		}
+		.btn {
+			&.btn-primary {
+				margin: 0 0 0.5rem 0 !important;
+				&:focus,
+				&:hover {
+					color: $white;
+					background: transparent;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.fz-lg {
+		font-size: 1.4rem;
+	}
+	.fz-md {
+		font-size: 1.1rem;
+	}
+	header {
+		padding: 1rem 0 !important;
+		&.sticky {
+			position: relative !important;
+		}
+	}
+	footer {
+		.line,
+		.line2 {
+			flex-direction: column;
+		}
+	}
+	.search-form {
+		width: auto !important;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.fz-lg {
+		font-size: 1.2rem;
+	}
+	.fz-md {
+		font-size: 1rem;
+	}
+	header {
+		padding: 1rem 0 !important;
+		&.sticky {
+			position: relative !important;;
+		}
+	}
+	.search-form {
+		width: auto !important;
+	}
+}

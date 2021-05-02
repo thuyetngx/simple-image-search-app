@@ -1,0 +1,20 @@
+@import "src/theme/theme-variables";
+footer {
+	background-color: $gray-200;
+	padding: .5rem 1rem;
+	.line {
+		border-bottom: 1px solid $gray-400;
+	}
+	.line2 {
+		padding-top: 0.75rem;
+		a {
+			padding: 0 0.25rem;
+			img {
+				width: 24px;
+			}
+		}
+	}
+	.copy-right {
+		color: $gray-600;
+	}
+}

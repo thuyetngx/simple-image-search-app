@@ -1,0 +1,61 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+html {
+	height: 100%;
+	overflow: initial !important;
+}
+body {
+	height: 100%;
+	font-family: Helvetica, sans-serif;
+	color: $gray-900;
+}
+
+.fz-lg {
+	font-size: 1.8rem;
+}
+.fz-md {
+	font-size: 1.2rem;
+}
+.fz-sm {
+	font-size: 0.8em;
+}
+
+.form-control {
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.btn {
+	&:focus {
+		outline: none;
+	}
+	&.btn-outline-light {
+		&:hover {
+			color: $pink;
+			border-color: $pink;
+			background-color: transparent;
+		}
+	}
+}
+
+.navbar {
+	margin: 0;
+	padding: 0;
+	.nav-item {
+		list-style: none;
+		.nav-link {
+			padding-right: 0.5rem;
+			padding-left: 0.5rem;
+			color: $gray-600;
+			cursor: pointer;
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: underline;
+			}
+		}
+	}
+}

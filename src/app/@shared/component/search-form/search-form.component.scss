@@ -1,0 +1,18 @@
+@import "src/theme/theme-variables";
+
+.search-form {
+	width: 480px;
+	input {
+		height: 50px;
+		border-radius: 36px;
+		text-align: center;
+	}
+	&.top-header {
+		width: 300px;
+		input {
+			height: 40px;
+			border-radius: 5px;
+			text-align: left;
+		}
+	}
+}

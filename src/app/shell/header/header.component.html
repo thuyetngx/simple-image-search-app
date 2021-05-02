@@ -1,0 +1,17 @@
+<header [ngClass]="{'sticky': isSticky}">
+	<div class="container">
+		<div class="d-flex align-items-center">
+			<div class="flex-grow-1">
+				<div class="d-md-flex align-items-center">
+					<div class="logo">
+						<a [routerLink]="['/']">
+							<span>Image Search</span> - Pixabay
+						</a>
+					</div>
+					<app-search-form [keywords]="keywords" [header]="true" (search)="onSearch($event)"></app-search-form>
+				</div>
+			</div>
+			<app-account class="d-none d-md-block"></app-account>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,23 @@
+{
+  "name": "pixabay",
+  "short_name": "Simple Image Search App",
+  "theme_color": "#ff0079",
+  "background_color": "#ff0079",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/pixabay-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/pixabay-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

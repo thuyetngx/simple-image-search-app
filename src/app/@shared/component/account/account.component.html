@@ -1,0 +1,26 @@
+<ng-container *ngIf="!username; else elseLoggedin">
+	<ul class="navbar">
+		<li class="nav-item">
+			<a class="nav-link" (click)="onLogin()">{{ 'Sign In' | translate }}</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link pr-0">{{ 'Sign Up' | translate }}</a>
+		</li>
+	</ul>
+</ng-container>
+<ng-template #elseLoggedin>
+	<div ngbDropdown *ngIf="username">
+		<ul class="navbar">
+			<li class="nav-item">
+				<a class="nav-link pr-0" ngbDropdownToggle>{{ username }}</a>
+			</li>
+		</ul>
+		<div ngbDropdownMenu aria-labelledby="user-dropdown" class="dropdown-menu dropdown-menu-right">
+			<h6 class="dropdown-header">
+				<span translate>Logged in as</span> <b>{{ username }}</b>
+			</h6>
+			<div class="dropdown-divider"></div>
+			<button class="dropdown-item btn" (click)="logout()" translate>Logout</button>
+		</div>
+	</div>
+</ng-template>

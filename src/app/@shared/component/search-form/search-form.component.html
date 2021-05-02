@@ -1,0 +1,8 @@
+<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()" [ngClass]="{ 'top-header': header }">
+	<input
+		class="form-control"
+		type="text"
+		formControlName="keyword"
+		placeholder="{{ 'Search image' | translate }}"
+	/>
+</form>
